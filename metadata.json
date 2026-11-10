@@ -2,5 +2,7 @@
   "name": "Stop The Period Struggle - Official Ebook",
   "description": "High-converting, straight-to-the-point landing page for Stop The Period Struggle ebook. Learn natural, simple ways to manage menstrual pain, irregular flow, and period health.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

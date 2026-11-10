@@ -1,5 +1,6 @@
 import React from 'react';
-import { BookOpen, Mail, ShieldCheck } from 'lucide-react';
+import { Mail, ShieldCheck } from 'lucide-react';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export const Footer: React.FC = () => {
   return (
@@ -10,7 +11,7 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-5">
             <div className="flex items-center gap-3 mb-3">
               <img
-                src="/assets/logo.jpg"
+                src={getAssetUrl('assets/logo.jpg')}
                 alt="Women Health Matters Logo"
                 className="w-10 h-10 rounded-full object-cover bg-white p-0.5 border border-stone-700 shrink-0"
               />

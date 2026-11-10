@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ShieldCheck, Lock, Check, Download, ArrowRight, CreditCard, ExternalLink, HelpCircle } from 'lucide-react';
 import { CurrencyOption } from '../data/ebookData';
 import { initiatePaystackPayment } from '../utils/paystack';
+import { getAssetUrl } from '../utils/assetUrl';
 
 interface OrderFormProps {
   currency: CurrencyOption;
@@ -130,7 +131,7 @@ export const OrderForm: React.FC<OrderFormProps> = ({
                 {/* Ebook Item */}
                 <div className="flex items-center gap-3.5 p-3 rounded-xl bg-white border border-rose-100 mb-5">
                   <img
-                    src="/assets/aistudio/WhatsApp_Image_2026-11-01_at_5.35.49_PM_4116dfad.jpeg"
+                    src={getAssetUrl('assets/aistudio/WhatsApp_Image_2026-11-01_at_5.35.49_PM_4116dfad.jpeg')}
                     alt="Ebook Thumbnail"
                     className="w-14 h-18 object-contain rounded-md drop-shadow-xs shrink-0"
                     loading="lazy"

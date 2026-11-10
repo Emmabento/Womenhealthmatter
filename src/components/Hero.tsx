@@ -1,9 +1,11 @@
 import React from 'react';
-import { ShieldCheck, Download, ArrowRight, CheckCircle2, Sparkles } from 'lucide-react';
+import { ShieldCheck, Download, ArrowRight, CheckCircle2, Sparkles, Eye } from 'lucide-react';
 import { CurrencyOption } from '../data/ebookData';
+import { getAssetUrl } from '../utils/assetUrl';
 
 interface HeroProps {
   onOrderClick: () => void;
+  onPreviewClick: () => void;
   currency: CurrencyOption;
   onCurrencyChange: (code: string) => void;
   availableCurrencies: Record<string, CurrencyOption>;
@@ -153,7 +155,7 @@ export const Hero: React.FC<HeroProps> = ({
               {/* Main Book Mockup Container */}
               <div className="relative bg-white p-3 rounded-2xl shadow-xl border border-rose-100/60 overflow-hidden">
                 <img
-                  src="/assets/aistudio/WhatsApp_Image_2026-11-01_at_5.35.49_PM_4116dfad.jpeg"
+                  src={getAssetUrl('assets/aistudio/WhatsApp_Image_2026-11-01_at_5.35.49_PM_4116dfad.jpeg')}
                   alt="Stop The Period Struggle Book Mockup"
                   className="w-full h-auto rounded-xl object-contain drop-shadow-md transition-transform duration-300 group-hover:scale-[1.02]"
                   loading="eager"

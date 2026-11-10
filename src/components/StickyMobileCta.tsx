@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { CurrencyOption } from '../data/ebookData';
+import { getAssetUrl } from '../utils/assetUrl';
 
 interface StickyMobileCtaProps {
   onOrderClick: () => void;
@@ -31,7 +32,7 @@ export const StickyMobileCta: React.FC<StickyMobileCtaProps> = ({ onOrderClick, 
       <div className="flex items-center justify-between gap-3 max-w-md mx-auto">
         <div className="flex items-center gap-2 min-w-0">
           <img
-            src="/assets/aistudio/WhatsApp_Image_2026-11-01_at_5.35.49_PM_4116dfad.jpeg"
+            src={getAssetUrl('assets/aistudio/WhatsApp_Image_2026-11-01_at_5.35.49_PM_4116dfad.jpeg')}
             alt="Book cover"
             className="w-8 h-10 object-contain rounded shrink-0"
             loading="lazy"

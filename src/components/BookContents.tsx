@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { BookOpen, Check, ArrowRight, Layers, FileText } from 'lucide-react';
 import { CHAPTER_CATEGORIES, CORE_SOLUTIONS } from '../data/ebookData';
+import { getAssetUrl } from '../utils/assetUrl';
 
 interface BookContentsProps {
   onOrderClick: () => void;
+  onPreviewClick?: () => void;
 }
 
-export const BookContents: React.FC<BookContentsProps> = ({ onOrderClick }) => {
+export const BookContents: React.FC<BookContentsProps> = ({ onOrderClick, onPreviewClick }) => {
   const [activePart, setActivePart] = useState<number | 'all'>('all');
 
   return (
@@ -101,7 +103,7 @@ export const BookContents: React.FC<BookContentsProps> = ({ onOrderClick }) => {
             <div className="lg:col-span-4 flex flex-col items-center">
               <div className="relative rounded-2xl overflow-hidden border border-rose-100 shadow-md max-w-xs sticky top-24">
                 <img
-                  src="/assets/aistudio/6fb86d66-9f4e-4470-9ea7-b08517075f86_6e50eb9f.jpg"
+                  src={getAssetUrl('assets/aistudio/6fb86d66-9f4e-4470-9ea7-b08517075f86_6e50eb9f.jpg')}
                   alt="Period Relief and Flow Guide"
                   className="w-full h-auto object-cover"
                   loading="lazy"

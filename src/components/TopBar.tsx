@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen } from 'lucide-react';
+import { getAssetUrl } from '../utils/assetUrl';
 
 interface TopBarProps {
   onOrderClick: () => void;
@@ -13,7 +13,7 @@ export const TopBar: React.FC<TopBarProps> = ({ onOrderClick, priceLabel }) => {
         {/* Zone 1: Wordmark with Official Logo */}
         <a href="#" className="flex items-center gap-2.5 group whitespace-nowrap shrink-0">
           <img
-            src="/assets/logo.jpg"
+            src={getAssetUrl('assets/logo.jpg')}
             alt="Women Health Matters Logo"
             className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover shadow-xs border border-rose-200/80 group-hover:scale-105 transition-transform"
           />

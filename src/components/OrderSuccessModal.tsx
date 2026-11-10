@@ -1,5 +1,6 @@
 import React from 'react';
 import { CheckCircle2, Download, BookOpen, X, FileText, Check, ShieldCheck } from 'lucide-react';
+import { getAssetUrl } from '../utils/assetUrl';
 
 interface OrderSuccessModalProps {
   isOpen: boolean;
@@ -22,7 +23,7 @@ export const OrderSuccessModal: React.FC<OrderSuccessModalProps> = ({
 }) => {
   if (!isOpen || !orderDetails) return null;
 
-  const pdfUrl = '/assets/aistudio/Stop-the-Period-Struggle_16dadbf9.pdf';
+  const pdfUrl = getAssetUrl('assets/aistudio/Stop-the-Period-Struggle_16dadbf9.pdf');
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-stone-950/75 backdrop-blur-xs animate-in fade-in duration-200">
